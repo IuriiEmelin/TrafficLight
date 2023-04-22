@@ -34,6 +34,9 @@
                                 <state key="normal" title="START">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="switchButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Hm-ei-pU2"/>
+                                </connections>
                             </button>
                             <view alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1QL-px-5LN">
                                 <rect key="frame" x="132" y="92" width="130" height="130"/>
@@ -53,6 +56,12 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DMS-T4-dp4" secondAttribute="bottom" multiplier="10:9.5" id="KmM-ha-8C6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenView" destination="usL-LO-ODB" id="yrl-vC-6mB"/>
+                        <outlet property="redView" destination="1QL-px-5LN" id="QCQ-gQ-Bk1"/>
+                        <outlet property="switchButton" destination="DMS-T4-dp4" id="SE1-M3-OQF"/>
+                        <outlet property="yellowView" destination="o8K-9H-PeY" id="o3e-2K-2wg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
