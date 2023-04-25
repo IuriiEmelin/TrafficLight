@@ -7,27 +7,29 @@
 
 import UIKit
 
+enum PossibleLight {
+    case red, yellow, green
+}
+
 final class ViewController: UIViewController {
 
-    enum PossibleLight {
-        case red
-        case yellow
-        case green
-    }
-    
     @IBOutlet var redView: UIView!
     @IBOutlet var yellowView: UIView!
     @IBOutlet var greenView: UIView!
+    
     @IBOutlet var switchButton: UIButton!
     
     private var currentLight = PossibleLight.red
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        switchButton.layer.cornerRadius = 10
+    }
+    
+    override func viewWillLayoutSubviews() {
         redView.layer.cornerRadius = redView.frame.width / 2
         yellowView.layer.cornerRadius = yellowView.frame.width / 2
         greenView.layer.cornerRadius = greenView.frame.width / 2
-        switchButton.layer.cornerRadius = 10
     }
     
     @IBAction func switchButtonTapped() {
